@@ -1,10 +1,10 @@
 [tool.poetry]
 name = "pdistmap"
-version = "0.1.1"
+version = "0.1.2"
 description = "This package helps to find the overlap percentage of two probability distributions."
 authors = ["Rehan Guha <rehanguha29@gmail.com>"]
 readme = "README.md"
-license = "MIT"
+license = "Apache-2.0"
 repository = "https://github.com/rehanguha/pdistmap"
 keywords = ["probability", "distributions", "statistics"]
 classifiers = [
@@ -20,10 +20,10 @@ classifiers = [
 
 
 [tool.poetry.dependencies]
-python = "^3.10"
-matplotlib = "^3.9.2"
-scipy = "^1.14.1"
-numpy = "^2.1.1"
+python = ">=3.9"
+matplotlib = ">=3.9.2"
+scipy = ">=1.13.1"
+numpy = ">=2.0.2"
 
 
 [tool.poetry.group.test.dependencies]
