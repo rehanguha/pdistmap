@@ -25,8 +25,10 @@ print(area) # Expected output: 0.8752770150023454
 
 KDEIntersection(A,B).intersection_area(plot = True)
 
+```
+
 ![Sample Image](KDE_Plot.png)
 
 
-```
+
 
