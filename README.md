@@ -11,6 +11,8 @@ pip install pdistmap
 
 ## How to use it
 
+### Method 1
+
 ```python
 
 from pdistmap.intersection import KDEIntersection
@@ -27,8 +29,5 @@ KDEIntersection(A,B).intersection_area(plot = True)
 
 ```
 
-![Sample Image](KDE_Plot.png)
-
-
-
+![Sample Image](artifact/KDE_Plot.png)
 
