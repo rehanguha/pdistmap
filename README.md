@@ -15,7 +15,7 @@ pip install pdistmap
 
 ```python
 
-from pdistmap.intersection import KDEIntersection
+from pdistmap.set import KDEIntersection
 import numpy as np
 
 A = np.array([25, 40, 70, 65, 69, 75, 80, 85])

@@ -1,6 +1,6 @@
 import pytest
 import numpy as np
-from pdistmap.intersection import KDEIntersection
+from pdistmap.set import KDEIntersection
 
 # Test cases for valid inputs
 def test_intersection_area_valid():
