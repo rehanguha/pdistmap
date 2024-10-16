@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "pdistmap"
-version = "0.1.2"
+version = "0.2.0"
 description = "This package helps to find the overlap percentage of two probability distributions."
 authors = ["Rehan Guha <rehanguha29@gmail.com>"]
 readme = "README.md"
