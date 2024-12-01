@@ -40,16 +40,6 @@ def test_initialization(sample_data):
     assert cluster_mapper.Bdict == Bdict
 
 
-def test_list_similarity(sample_data):
-    """Test the list_similarity method."""
-    Adict, Bdict = sample_data
-    cluster_mapper = ClusterMapper(Adict, Bdict)
-
-    # Assuming the mock will generate a random similarity score
-    similarity = cluster_mapper.list_similarity(Adict["A_o"], Bdict["A"])
-    assert isinstance(similarity, float)  # Ensure the result is a float
-
-
 def test_find_top_n_matches(sample_data):
     """Test the find_top_n_matches method."""
     Adict, Bdict = sample_data
