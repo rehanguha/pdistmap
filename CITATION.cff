@@ -3,8 +3,9 @@ message: "If you use this software, please cite it as below."
 authors:
 - family-names: Guha
   given-names: Rehan
-orcid: https://orcid.org/0000-0001-5471-586X
-title:rehanguha/pdistmap: v0.3.0
+  orcid: https://orcid.org/0000-0001-5471-586X
+title: pdistmap
 version: v0.3.0
 date-released: 2024-12-02
-doi: https://doi.org/10.5281/zenodo.14257978
+doi: 10.5281/zenodo.14257978
+url: "https://github.com/rehanguha/pdistmap"
