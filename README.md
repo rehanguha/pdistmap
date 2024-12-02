@@ -1,5 +1,7 @@
 # PDistMap
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14257900.svg)](https://doi.org/10.5281/zenodo.14257900)
+
 This package calculates the overlap percentage between two probability distributions, offering extensive applications in both academic and industrial settings. For instance, in multiple iterations of machine learning clustering, the core algorithm may change the cluster number or name, making it challenging for the end user to map the clusters accurately.
 
 ### Example Use Cases:
