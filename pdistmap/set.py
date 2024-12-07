@@ -187,6 +187,38 @@ class KDEIntersection:
         adjusted_xmax = xmax + dx
 
         return adjusted_xmin, adjusted_xmax
+    
+    def _min_max_scaler(self, data: np.ndarray, feature_range: Tuple[float, float] = (0, 1)) -> np.ndarray:
+        """
+        Scales the input data to a specified range using min-max normalization.
+
+        Parameters
+        ----------
+        data : np.ndarray
+            The data array to normalize.
+        feature_range : Tuple[float, float], optional
+            The desired range of the transformed data. Default is (0, 1).
+
+        Returns
+        -------
+        np.ndarray
+            The normalized data scaled to the specified range.
+
+        Raises
+        ------
+        ValueError
+            If the input data array has zero variance (all values are identical).
+        """
+        min_val, max_val = feature_range  # Target feature range for scaling
+        X_min = np.min(data)  # Minimum value in the data
+        X_max = np.max(data)  # Maximum value in the data
+
+        if X_min == X_max:
+            raise ValueError("Cannot scale data with zero variance (all values are identical).")
+
+        # Perform min-max scaling
+        X_scaled = (data - X_min) / (X_max - X_min) * (max_val - min_val) + min_val
+        return X_scaled
 
     def _build_linespace(
         self, xmin: float, xmax: float, linespace_num: int = 10000
@@ -215,6 +247,7 @@ class KDEIntersection:
         adjustment_factor: float = 0.2,
         bw_method: str = "scott",
         linespace_num: int = 10000,
+        scale: bool = False,
         plot: bool = False,
     ) -> float:
         """
@@ -238,6 +271,10 @@ class KDEIntersection:
         """
         A = self._validate_numeric_array(self.A)
         B = self._validate_numeric_array(self.B)
+
+        if scale:
+            A = self._min_max_scaler(data = A.reshape(-1,1)).flatten()
+            B = self._min_max_scaler(data = B.reshape(-1,1)).flatten()
 
         kdeA = self._calculate_kde(A, bw_method=bw_method)
         kdeB = self._calculate_kde(B, bw_method=bw_method)
