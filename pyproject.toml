@@ -21,6 +21,8 @@ classifiers = [
 
 [tool.poetry.dependencies]
 python = ">=3.7"
+numpy
+scipy
 
 
 [tool.poetry.group.test.dependencies]
