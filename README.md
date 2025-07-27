@@ -1,6 +1,8 @@
-# PDistMap
+# PdistMap: A Kernel Density Overlap Metric for Distributional Similarity and Cluster Matching
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.14257979.svg)](https://doi.org/10.5281/zenodo.14257979)
+
+SSRN: https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5358971 
 
 
 This package calculates the overlap percentage between two probability distributions, offering extensive applications in both academic and industrial settings. For instance, in multiple iterations of machine learning clustering, the core algorithm may change the cluster number or name, making it challenging for the end user to map the clusters accurately.
